@@ -1,0 +1,140 @@
+/* Playful Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Let's keep it playful! */
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: yellow; /* Because why not? */
+}
+
+header .logo {
+    width: 50px;
+}
+
+.intro {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #e0f7fa;
+}
+
+.intro h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 1.3em;
+}
+
+section {
+    padding: 50px 20px;
+}
+
+section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #00796b;
+}
+
+section p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #333;
+    font-size: 1.2em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form input, form textarea, form button {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #00796b;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    background-color: #004d40;
+}
+
+footer {
+    padding: 10px;
+    text-align: center;
+    background-color: #333;
+    color: white;
+    margin-top: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    .intro h1 {
+        font-size: 2em;
+    }
+
+    .intro p {
+        font-size: 1.1em;
+    }
+
+    section h2 {
+        font-size: 1.5em;
+    }
+}
