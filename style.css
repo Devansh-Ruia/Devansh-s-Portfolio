@@ -1,59 +1,58 @@
-/* Playful Reset */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body Styles */
 body {
-    font-family: 'Comic Sans MS', cursive, sans-serif; /* Let's keep it playful! */
-    background-color: #f0f0f0;
+    font-family: 'Verdana', sans-serif;
+    background-color: #fff4e1;
     color: #333;
+    text-align: center;
 }
 
+/* Header */
 header {
-    background: #333;
+    background-color: #f06d06;
+    padding: 20px;
     color: white;
-    padding: 10px 0;
 }
 
-header nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+.logo-container {
+    margin-bottom: 10px;
 }
 
-header nav ul {
+.logo {
+    width: 120px;
+    height: auto;
+}
+
+nav ul {
     list-style: none;
     display: flex;
+    justify-content: center;
 }
 
-header nav ul li {
-    margin: 0 15px;
+nav ul li {
+    margin: 0 20px;
 }
 
-header nav ul li a {
+nav ul li a {
     color: white;
+    font-size: 1.2em;
     text-decoration: none;
-    font-size: 1.1em;
-    transition: all 0.3s ease;
 }
 
-header nav ul li a:hover {
-    color: yellow; /* Because why not? */
+nav ul li a:hover {
+    text-decoration: underline;
 }
 
-header .logo {
-    width: 50px;
-}
-
+/* Section Styles */
 .intro {
-    padding: 60px 20px;
-    text-align: center;
-    background-color: #e0f7fa;
+    background-color: #fff0cc;
+    padding: 50px 20px;
 }
 
 .intro h1 {
@@ -65,76 +64,51 @@ header .logo {
     font-size: 1.3em;
 }
 
-section {
+.content-section {
     padding: 50px 20px;
 }
 
-section h2 {
+.content-section h2 {
     font-size: 2em;
     margin-bottom: 20px;
-    text-align: center;
-    color: #00796b;
 }
 
-section p {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-    color: #333;
+.content-section p {
     font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    color: #555;
 }
 
+/* Contact Form */
 form {
-    display: flex;
-    flex-direction: column;
     max-width: 400px;
     margin: 0 auto;
 }
 
 form input, form textarea, form button {
+    width: 100%;
     padding: 10px;
     margin: 10px 0;
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
     border-radius: 5px;
 }
 
 form button {
-    background-color: #00796b;
+    background-color: #f06d06;
     color: white;
     cursor: pointer;
-    transition: all 0.3s ease;
 }
 
 form button:hover {
-    background-color: #004d40;
+    background-color: #d75c05;
 }
 
+/* Footer */
 footer {
-    padding: 10px;
-    text-align: center;
     background-color: #333;
     color: white;
-    margin-top: 30px;
-}
-
-@media screen and (max-width: 768px) {
-    header nav ul {
-        flex-direction: column;
-    }
-
-    header nav ul li {
-        margin: 10px 0;
-    }
-
-    .intro h1 {
-        font-size: 2em;
-    }
-
-    .intro p {
-        font-size: 1.1em;
-    }
-
-    section h2 {
-        font-size: 1.5em;
-    }
+    padding: 20px;
+    font-size: 1em;
+    margin-top: 50px;
 }
