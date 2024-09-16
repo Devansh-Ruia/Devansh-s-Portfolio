@@ -11,19 +11,18 @@ html {
 
 /* Body and Basic Styles */
 body {
+    padding: 20px;    /* Adds padding around the entire body */
     font-family: 'Poppins', sans-serif;
     background-color: #fff0e1;
     color: #333;
-    text-align: center;
-    line-height: 1.6;  /* Add a line height for better readability */
-    padding: 20px;     /* Add padding to the body for space around the edges */
+    line-height: 1.6;
 }
 
 /* Header */
 header {
     background-color: #f08080;
     padding: 30px 0;  /* Increase padding for a more spacious header */
-    margin-bottom: 40px; /* Add margin below the header */
+    margin-bottom: 40px;
 }
 
 header nav {
@@ -43,28 +42,33 @@ header nav ul {
     gap: 30px;  /* Increase space between nav links */
 }
 
-header nav ul li a {
+/* Smooth transition for links and icons */
+.smooth-transition {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+header nav ul li a, .social-links a {
     font-size: 1.2em;
     font-family: 'Fredoka One', sans-serif;
     color: white;
     text-decoration: none;
-    transition: color 0.3s ease;
 }
 
-header nav ul li a:hover {
+header nav ul li a:hover, .social-links a:hover {
     color: #ffeb3b;
+    transform: scale(1.05);
 }
 
 /* Section Styling */
 .intro {
     background-color: #ffe4b3;
-    padding: 80px 20px;  /* Add extra padding for more space around the intro text */
-    margin-bottom: 60px; /* Increase margin to space out sections */
+    padding: 80px 20px;
+    margin-bottom: 60px;
 }
 
 .intro h1 {
     font-size: 2.5em;
-    margin-bottom: 30px;  /* Add more space below the heading */
+    margin-bottom: 30px;
     font-family: 'Fredoka One', sans-serif;
 }
 
@@ -73,26 +77,26 @@ header nav ul li a:hover {
     font-family: 'Poppins', sans-serif;
 }
 
-/* Content Sections */
+/* Consistent padding for all content sections */
 .content-section {
-    padding: 60px 20px;  /* Increase padding within sections */
-    margin-bottom: 60px; /* Add space between sections */
-    max-width: 1000px;   /* Center content with a max width */
-    margin-left: auto;
-    margin-right: auto;
+    padding: 80px 20px;
+    margin-bottom: 60px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
+/* Headings inside sections */
 .content-section h2 {
     font-size: 2em;
-    margin-bottom: 30px; /* Add more space below section headings */
+    margin-bottom: 30px;
     font-family: 'Fredoka One', sans-serif;
 }
 
+/* Paragraphs inside sections */
 .content-section p, ul {
     font-size: 1.2em;
-    margin-bottom: 40px;  /* Increase space between paragraphs and lists */
-    line-height: 1.8;     /* More line height for better readability */
-    font-family: 'Poppins', sans-serif;
+    margin-bottom: 40px;
+    line-height: 1.8;
 }
 
 ul {
@@ -100,119 +104,28 @@ ul {
 }
 
 ul li {
-    margin-bottom: 20px;  /* Increase space between list items */
+    margin-bottom: 20px;
 }
 
 /* Contact Form */
 form {
     max-width: 500px;
     margin: 0 auto;
-    padding: 40px;       /* Add padding inside the form for space */
+    padding: 40px;
     border: 2px solid #ddd;
     border-radius: 10px;
-    background-color: #f9f9f9;  /* Light background for the form */
+    background-color: #f9f9f9;
 }
 
 form input, form textarea, form button {
     width: 100%;
-    padding: 15px;        /* Add more padding to form inputs */
-    margin: 15px 0;       /* Increase space between inputs */
+    padding: 15px;
+    margin: 15px 0;
     border: 2px solid #ccc;
     border-radius: 5px;
 }
 
-form button {
-    background-color: #f08080;
-    color: white;
-    font-size: 1.1em;
-    cursor: pointer;
-    border: none;
-}
-
-form button:hover {
-    background-color: #e07070;
-}
-
-/* Footer Styles */
-footer {
-    background-color: #333;            /* Dark background for footer */
-    color: white;                      /* White text */
-    padding: 40px 20px;                /* Padding for space inside the footer */
-    text-align: center;                /* Centered content */
-    font-size: 1em;                    /* Standard font size */
-    margin-top: 60px;                  /* Space between footer and main content */
-}
-
-.footer-content {
-    max-width: 1000px;                 /* Limit content width */
-    margin: 0 auto;                    /* Center the content */
-}
-
-footer p {
-    margin: 10px 0;                   /* Add some margin between paragraphs */
-}
-
-.social-links {
-    margin-top: 15px;                  /* Space above social icons */
-}
-
-.social-links a {
-    margin: 0 10px;                   /* Space between social icons */
-    color: white;                     /* White icons */
-    font-size: 1.5em;                 /* Larger icon size */
-    text-decoration: none;            /* Remove underline from links */
-    transition: color 0.3s ease;      /* Smooth color transition on hover */
-}
-
-.social-links a:hover {
-    color: #ffeb3b;                   /* Hover color effect (yellow) */
-}
-
 /* Button Styling */
-form button {
-    background-color: #f08080;   /* Main button color */
-    color: white;                /* Button text color */
-    font-size: 1.1em;            /* Font size for the button */
-    padding: 15px 20px;          /* Padding to make the button more prominent */
-    border: none;                /* No border */
-    border-radius: 8px;          /* Rounded corners */
-    cursor: pointer;             /* Pointer cursor on hover */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions for hover effects */
-}
-
-/* Button Hover Effect */
-form button:hover {
-    background-color: #ff5722;   /* Change to a darker shade of orange on hover */
-    transform: scale(1.05);      /* Slightly increase button size on hover for emphasis */
-}
-
-/* Button Focus (when clicked or tabbed) */
-form button:focus {
-    outline: none;               /* Remove default browser outline */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow on focus */
-}
-/* Icon Styling for Images */
-.icon {
-    width: 40px;              /* Adjust width */
-    height: auto;             /* Maintain aspect ratio */
-    margin-right: 15px;       /* Space between icon and heading */
-    vertical-align: middle;   /* Align icon with text */
-}
-/* Smooth transitions for links */
-header nav ul li a {
-    font-size: 1.2em;
-    font-family: 'Fredoka One', sans-serif;
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and scale */
-}
-
-header nav ul li a:hover {
-    color: #ffeb3b;
-    transform: scale(1.05); /* Slight scaling effect on hover */
-}
-
-/* Smooth transitions for buttons */
 form button {
     background-color: #f08080;
     color: white;
@@ -221,36 +134,58 @@ form button {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for color and scaling */
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 form button:hover {
     background-color: #ff5722;
-    transform: scale(1.05); /* Scale slightly on hover */
+    transform: scale(1.05);
 }
 
-/* Smooth transitions for social media icons */
+form button:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 1em;
+    margin-top: 60px;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+.social-links {
+    margin-top: 15px;
+}
+
 .social-links a {
     margin: 0 10px;
     color: white;
     font-size: 1.5em;
     text-decoration: none;
-    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and scaling */
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.social-links a:hover {
-    color: #ffeb3b;
-    transform: scale(1.2); /* Larger scaling effect on hover */
-}
-/* Default state: hidden, slightly scaled down */
-h2 {
+/* Fade-in effect */
+.fade-in {
     opacity: 0;
-    transform: scale(0.95);
-    transition: opacity 0.6s ease, transform 0.6s ease; /* Smooth transition for scale and opacity */
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-/* When element is scrolled into view */
-h2.is-visible {
+.fade-in.visible {
     opacity: 1;
-    transform: scale(1); /* Full opacity and normal size when in view */
+    transform: translateY(0);
 }
