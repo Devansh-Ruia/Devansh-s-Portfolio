@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 /* General Reset */
 * {
     margin: 0;
@@ -193,4 +197,60 @@ form button:focus {
     height: auto;             /* Maintain aspect ratio */
     margin-right: 15px;       /* Space between icon and heading */
     vertical-align: middle;   /* Align icon with text */
+}
+/* Smooth transitions for links */
+header nav ul li a {
+    font-size: 1.2em;
+    font-family: 'Fredoka One', sans-serif;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and scale */
+}
+
+header nav ul li a:hover {
+    color: #ffeb3b;
+    transform: scale(1.05); /* Slight scaling effect on hover */
+}
+
+/* Smooth transitions for buttons */
+form button {
+    background-color: #f08080;
+    color: white;
+    font-size: 1.1em;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for color and scaling */
+}
+
+form button:hover {
+    background-color: #ff5722;
+    transform: scale(1.05); /* Scale slightly on hover */
+}
+
+/* Smooth transitions for social media icons */
+.social-links a {
+    margin: 0 10px;
+    color: white;
+    font-size: 1.5em;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and scaling */
+}
+
+.social-links a:hover {
+    color: #ffeb3b;
+    transform: scale(1.2); /* Larger scaling effect on hover */
+}
+/* Default state: hidden, slightly scaled down */
+h2 {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.6s ease, transform 0.6s ease; /* Smooth transition for scale and opacity */
+}
+
+/* When element is scrolled into view */
+h2.is-visible {
+    opacity: 1;
+    transform: scale(1); /* Full opacity and normal size when in view */
 }
