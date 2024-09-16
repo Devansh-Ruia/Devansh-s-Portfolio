@@ -9,7 +9,7 @@ AOS.init({
 });
 // Scroll-triggered animations for headings
 window.addEventListener('scroll', function() {
-    const headings = document.querySelectorAll('.content-section');
+    const headings = document.querySelectorAll('h2');
     const triggerPoint = window.innerHeight / 1.1; // Adjust trigger point
 
     headings.forEach((heading) => {
