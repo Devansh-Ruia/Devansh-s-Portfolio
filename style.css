@@ -129,15 +129,68 @@ form button:hover {
     background-color: #e07070;
 }
 
-/* Footer */
+/* Footer Styles */
 footer {
-    background-color: #333;
-    color: white;
-    padding: 30px;  /* Add padding to the footer */
-    font-size: 1em;
-    margin-top: 60px;  /* Space between the content and the footer */
+    background-color: #333;            /* Dark background for footer */
+    color: white;                      /* White text */
+    padding: 40px 20px;                /* Padding for space inside the footer */
+    text-align: center;                /* Centered content */
+    font-size: 1em;                    /* Standard font size */
+    margin-top: 60px;                  /* Space between footer and main content */
+}
+
+.footer-content {
+    max-width: 1000px;                 /* Limit content width */
+    margin: 0 auto;                    /* Center the content */
 }
 
 footer p {
-    margin: 0;
+    margin: 10px 0;                   /* Add some margin between paragraphs */
+}
+
+.social-links {
+    margin-top: 15px;                  /* Space above social icons */
+}
+
+.social-links a {
+    margin: 0 10px;                   /* Space between social icons */
+    color: white;                     /* White icons */
+    font-size: 1.5em;                 /* Larger icon size */
+    text-decoration: none;            /* Remove underline from links */
+    transition: color 0.3s ease;      /* Smooth color transition on hover */
+}
+
+.social-links a:hover {
+    color: #ffeb3b;                   /* Hover color effect (yellow) */
+}
+
+/* Button Styling */
+form button {
+    background-color: #f08080;   /* Main button color */
+    color: white;                /* Button text color */
+    font-size: 1.1em;            /* Font size for the button */
+    padding: 15px 20px;          /* Padding to make the button more prominent */
+    border: none;                /* No border */
+    border-radius: 8px;          /* Rounded corners */
+    cursor: pointer;             /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions for hover effects */
+}
+
+/* Button Hover Effect */
+form button:hover {
+    background-color: #ff5722;   /* Change to a darker shade of orange on hover */
+    transform: scale(1.05);      /* Slightly increase button size on hover for emphasis */
+}
+
+/* Button Focus (when clicked or tabbed) */
+form button:focus {
+    outline: none;               /* Remove default browser outline */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow on focus */
+}
+/* Icon Styling for Images */
+.icon {
+    width: 40px;              /* Adjust width */
+    height: auto;             /* Maintain aspect ratio */
+    margin-right: 15px;       /* Space between icon and heading */
+    vertical-align: middle;   /* Align icon with text */
 }
