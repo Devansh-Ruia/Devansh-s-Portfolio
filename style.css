@@ -190,15 +190,26 @@ footer p {
     opacity: 1;
     transform: translateY(0); /* Move back to original position */
 }
-/* Default scale state */
+/* Fade-in with scale */
 .scale-in {
     opacity: 0;
-    transform: scale(0.9); /* Start slightly smaller */
+    transform: scale(0.9);
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-/* When in view */
 .scale-in.visible {
     opacity: 1;
-    transform: scale(1); /* Scale back to normal size */
+    transform: scale(1);
+}
+
+/* Responsive scaling for smaller devices */
+@media (max-width: 768px) {
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .icon {
+        width: 30px;
+    }
 }
