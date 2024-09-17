@@ -1,5 +1,3 @@
-// Correctly structured code in 'script.js'
-
 document.addEventListener('DOMContentLoaded', function() {
     // Define options for the Intersection Observer
     const observerOptions = {
@@ -22,31 +20,37 @@ document.addEventListener('DOMContentLoaded', function() {
     // Target all elements with the class 'fade-in' for observation
     const fadeInElements = document.querySelectorAll('.fade-in');
     fadeInElements.forEach(el => observer.observe(el));
-});
-// Smooth scrolling for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(event) {
-        event.preventDefault();
 
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(event) {
+            event.preventDefault();
 
-        window.scrollTo({
-            top: targetElement.offsetTop, // Scroll to the element's position
-            behavior: 'smooth'             // Enable smooth scrolling
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+
+            window.scrollTo({
+                top: targetElement.offsetTop, // Scroll to the element's position
+                behavior: 'smooth'             // Enable smooth scrolling
+            });
         });
     });
-});
-const backToTopButton = document.getElementById('backToTop');
 
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-        backToTopButton.classList.add('show');
-    } else {
-        backToTopButton.classList.remove('show');
-    }
-});
+    // Back to Top Button functionality
+    const backToTopButton = document.getElementById('backToTop');
 
-backToTopButton.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTopButton.classList.add('show');
+        } else {
+            backToTopButton.classList.remove('show');
+        }
+    });
+
+    backToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // Smooth scrolling to the top
+        });
+    });
 });

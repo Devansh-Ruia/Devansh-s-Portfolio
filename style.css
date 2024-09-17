@@ -247,20 +247,30 @@ img {
     background-color: #e64a19;
     transform: scale(1.05); /* Slight scaling effect */
 }
+/* Back to Top Button */
 .back-to-top {
     position: fixed;
     bottom: 20px;
     right: 20px;
     background-color: #f08080;
     color: white;
-    padding: 10px 15px;
+    border: none;
     border-radius: 50%;
+    padding: 10px 15px;
+    font-size: 1.5em;
     cursor: pointer;
-    display: none;
-    transition: opacity 0.3s ease;
+    display: none; /* Hidden by default */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000; /* Ensure it stays on top */
 }
 
+/* Show the button when needed */
 .back-to-top.show {
     display: block;
     opacity: 1;
+}
+
+.back-to-top:hover {
+    background-color: #ff5722;
+    transform: scale(1.1); /* Slightly enlarge on hover */
 }
