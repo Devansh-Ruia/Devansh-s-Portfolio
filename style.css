@@ -252,16 +252,16 @@ img {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #f08080;
-    color: white;
-    border: none;
+    background-color: transparent;  /* Transparent background */
+    color: #f08080;                 /* Initial text color */
+    border: 2px solid #f08080;      /* Border to match the text color */
     border-radius: 50%;
     padding: 10px 15px;
     font-size: 1.5em;
     cursor: pointer;
-    display: none; /* Hidden by default */
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    z-index: 1000; /* Ensure it stays on top */
+    display: none;  /* Hidden by default */
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+    z-index: 1000;  /* Ensure it stays on top */
 }
 
 /* Show the button when needed */
@@ -270,7 +270,27 @@ img {
     opacity: 1;
 }
 
+/* Hover effect: Change text color and add background */
 .back-to-top:hover {
-    background-color: #ff5722;
-    transform: scale(1.1); /* Slightly enlarge on hover */
+    background-color: #f08080;      /* Background changes on hover */
+    color: white;                   /* Text color changes on hover */
+    transform: scale(1.1);          /* Slightly enlarge on hover */
+}
+/* Title and Image Styling */
+.article-title {
+font-size: 2.5em;
+font-weight: bold;
+text-align: center;
+margin-bottom: 10px;
+padding-top: 20px;
+}
+
+.article-image {
+display: block;
+margin: 0 auto;
+width: 100%;
+max-width: 600px;
+height: auto;
+border-radius: 10px;
+margin-bottom: 20px;
 }
